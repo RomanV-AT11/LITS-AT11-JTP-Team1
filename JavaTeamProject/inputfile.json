@@ -1,0 +1,54 @@
+{
+"Songs": [
+  {
+    "Artist": "Sting",
+    "Name": "Space",
+    "Duration": "241"
+    },
+      {
+    "Artist": "Stitches",
+    "Name": "Shown Mendes",
+    "Duration": "289"
+    },
+      {
+    "Artist": "Sam Hunt",
+    "Name": "House Party",
+    "Duration": "278"
+    },
+      {
+    "Artist": "Maroon 5",
+    "Name": "This Love",
+    "Duration": "219"
+    },
+      {
+    "Artist": "Sting",
+    "Name": "Roxanne",
+    "Duration": "241"
+    },
+  {
+    "Artist": " The Beatles",
+    "Name": "Come together",
+    "Duration": "289"
+  },
+  {
+    "Artist": "The Beatles",
+    "Name": "All you need is love",
+    "Duration": "209"
+  },
+  {
+  "Artist": "The Beatles",
+    "Name": "Yellow Submarine",
+    "Duration": "189"
+  },
+  {
+    "Artist": "The Beatles",
+    "Name": "All you need is love",
+    "Duration": "210"
+  },
+  {
+    "Artist": "Lana Del Rey",
+    "Name": "Sumertine Sadness",
+    "Duration": "265"
+  }
+  ]
+}
