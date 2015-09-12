@@ -1,4 +1,4 @@
-
+package songs;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
@@ -14,7 +14,7 @@ public class Main {
 
         List<Song> songs = null;
         try {
-            songs = objectMapper.readValue(new File("songs.json"), objectMapper.getTypeFactory().constructCollectionType(List.class, Song.class));
+            songs = objectMapper.readValue(new File("inputfile.json"), objectMapper.getTypeFactory().constructCollectionType(List.class, Song.class));
         } catch (IOException e) {
             System.out.println("Cannot load data");
             return;
@@ -26,4 +26,5 @@ public class Main {
 
 
     }
+
 }
