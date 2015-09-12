@@ -3,6 +3,8 @@ package songs;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -17,18 +19,32 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class mainClass {
 
 		public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+//
+//			File jsonFile = new File("inputfile.json");
+//		
+//			SongsNS Songs = null; 
+//
+//		    ObjectMapper mapper = new ObjectMapper(); 
+//		    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+//
+//		    Songs = mapper.readValue(jsonFile, SongsNS.class);
+//		    System.out.println(Songs.getName());
 
-			File jsonFile = new File("inputfile.json");
-		
-			SongsNS Songs = null; 
+			ObjectMapper mapper = new ObjectMapper();
 
-		    ObjectMapper mapper = new ObjectMapper(); 
-		    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
-		    Songs = mapper.readValue(jsonFile, SongsNS.class);
-		    System.out.println(Songs.getName());
-
-
+	        Collection<SongsNS> songs = null;
+	        try {
+	        	
+	            songs = mapper.readValue(new File("intputfile.json"), mapper.getTypeFactory().constructCollectionType(List.class, SongsNS.class));
+	        } catch (IOException e) {
+	            System.out.println("Cannot load data");
+	            //e.printStackTrace();
+	            return;
+	        }
+	        //Collections.sort(songs);
+	        for (SongsNS song : songs) {
+	            System.out.println(song);
+	        }
 
 //			JSONObject obj;
 //			try {
